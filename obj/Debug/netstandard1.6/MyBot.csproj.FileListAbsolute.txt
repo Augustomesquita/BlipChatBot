@@ -1,0 +1,3 @@
+/home/augusto/Projetos/Estudos/Blip/BlipChatBot/obj/Debug/netstandard1.6/MyBot.csproj.CoreCompileInputs.cache
+/home/augusto/Projetos/Estudos/Blip/BlipChatBot/obj/Debug/netstandard1.6/MyBot.AssemblyInfoInputs.cache
+/home/augusto/Projetos/Estudos/Blip/BlipChatBot/obj/Debug/netstandard1.6/MyBot.AssemblyInfo.cs

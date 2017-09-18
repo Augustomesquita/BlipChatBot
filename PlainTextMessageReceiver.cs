@@ -4,6 +4,7 @@ using System.Threading.Tasks;
 using Lime.Protocol;
 using System.Diagnostics;
 using Take.Blip.Client;
+using Lime.Messaging.Contents;
 
 namespace MyBot
 {
@@ -24,8 +25,11 @@ namespace MyBot
 
         public async Task ReceiveAsync(Message message, CancellationToken cancellationToken)
         {
+            
+            Console.WriteLine(message.Content.ToString());
+            var messageToSend = new PlainText { Text = "O que você é? Robô ou humano?" };
             Trace.TraceInformation($"From: {message.From} \tContent: {message.Content}");
-            await _sender.SendMessageAsync("Pong!", message.From, cancellationToken);
+            await _sender.SendMessageAsync(messageToSend, message.From, cancellationToken);
         }
     }
 }

@@ -1,56 +1,74 @@
 ﻿{
   /* TODO: Put your chatbot identifier and accessKey bellow. */
-  "identifier": "",
-  "accessKey": "",
-    "messageReceivers": [
-    {
+  "identifier": "augutobot",
+  "accessKey": "NTZlWWpCbmVOTEc4R2haM21jSFM=",
+  "messageReceivers": [{
       "mediaType": "text/plain",
-	  "content": "ol[áa]|oi|al[oô]",
-      "response": {
-        "mediaType": "text/plain",
-        "plainContent": "Olá! Esta é uma demonstração do SDK do Blip. Você é um humano ou um robô?"
-      },
-      "state": "default",
-      "outState": "question"
-    },
-    {
-      "mediaType": "text/plain",
-      "content": "humano|umano|gente|pessoa|homem|mulher",
-      "state": "question",
-      "response": {
-        "mediaType": "text/plain",
-        "plainContent": "Eu sou um chatbot, mas tenho vários amigos humanos 😀"
-      }
-    },
-    {
-      "mediaType": "text/plain",
-      "content": "bot|rob[oô]|chatbot",
-      "state": "question",
-      "response": {
-        "mediaType": "text/plain",
-        "plainContent": "Que coincidência, eu também sou! 😉"
-      }
-    },
-    {
-      "priority": "1",
-      "state": "question",
+      "content": "^(inicio|iniciar|começar|ajuda)$",
       "response": {
         "mediaType": "application/vnd.lime.select+json",
         "jsonContent": {
-          "text": "Ops, não conheço este ser... Afinal, o que você é?",
-          "options": [
-            {
-              "text": "Humano"
+          "text": "Olá, seja bem-vindo ao serviço de ajuda do Messaging Hub. Escolha o que você deseja receber:",
+          "options": [{
+              "order": 1,
+              "text": "Um TEXTO",
+              "type": "text/plain",
+              "value": "texto"
             },
             {
-              "text": "Robô"
+              "order": 2,
+              "text": "Uma IMAGEM",
+              "type": "text/plain",
+              "value": "imagem"
+            },
+            {
+              "order": 3,
+              "text": "A DATA atual",
+              "type": "text/plain",
+              "value": "data"
             }
           ]
         }
       }
+    },
+    {
+      "mediaType": "text/plain",
+      "content": "^(texto|um texto|1)$",
+      "response": {
+        "mediaType": "text/plain",
+        "plainContent": "Este é um texto simples, sem nada de especial."
+      }
+    },
+    {
+      "mediaType": "text/plain",
+      "content": "^(imagem|uma imagem|2)$",
+      "response": {
+        "mediaType": "application/vnd.lime.media-link+json",
+        "jsonContent": {
+          "type": "image/jpeg",
+          "uri": "http://static.boredpanda.com/blog/wp-content/uploads/2015/09/Instagrams-most-famous-cat-Nala165604f5fc88e5f.jpg",
+          "text": "Miau!"
+        }
+      }
+    },
+    {
+      "mediaType": "text/plain",
+      "content": "^(data|a data atual|3)$",
+      "type": "DateMessageReceiver",
+      "settings": {
+        "culture": "pt-BR",
+        "message": "A data atual é {0}."
+      }
+    },
+    {
+      "priority": "100",
+      "response": {
+        "mediaType": "text/plain",
+        "plainContent": "Ops, não entendi o que você quis dizer.",
+        "value": "inicio"
+      }
     }
   ],
-  "settings": {
-  },
+  "settings": {},
   "schemaVersion": 2
 }

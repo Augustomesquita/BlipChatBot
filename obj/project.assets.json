@@ -5878,23 +5878,23 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\Augusto\\.nuget\\packages\\": {},
-    "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder": {}
+    "/home/augusto/.nuget/packages/": {},
+    "/usr/share/dotnet/sdk/NuGetFallbackFolder": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Augusto\\MyBot\\MyBot.csproj",
+      "projectUniqueName": "/home/augusto/Projetos/Estudos/Blip/BlipChatBot/MyBot.csproj",
       "projectName": "MyBot",
-      "projectPath": "C:\\Users\\Augusto\\MyBot\\MyBot.csproj",
-      "packagesPath": "C:\\Users\\Augusto\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Augusto\\MyBot\\obj\\",
+      "projectPath": "/home/augusto/Projetos/Estudos/Blip/BlipChatBot/MyBot.csproj",
+      "packagesPath": "/home/augusto/.nuget/packages/",
+      "outputPath": "/home/augusto/Projetos/Estudos/Blip/BlipChatBot/obj/",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
-        "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+        "/usr/share/dotnet/sdk/NuGetFallbackFolder"
       ],
       "configFilePaths": [
-        "C:\\Users\\Augusto\\AppData\\Roaming\\NuGet\\NuGet.Config"
+        "/home/augusto/.nuget/NuGet/NuGet.Config"
       ],
       "originalTargetFrameworks": [
         "netcoreapp2.0"
